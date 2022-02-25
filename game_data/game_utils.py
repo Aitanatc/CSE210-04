@@ -34,8 +34,8 @@ class GameUtils():
     
 
     def set_score(self, score_var):
-        
         self.currentScore = score_var
         
     def get_game_name(self):
         return self.game_name
+

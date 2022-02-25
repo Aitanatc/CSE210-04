@@ -4,6 +4,7 @@ from time import sleep
 import turtle
 from game_data.game_utils import GameUtils
 from game_data.player import Player
+pen = turtle.Turtle
 
 class Game():
     
@@ -30,12 +31,15 @@ class Game():
 
     def start_game(self):
         self.window.bgcolor("black")
+        self.gameutils.draw_text_to_screen("Score: 0", 0, 250 )
+
+
         while True:
             self.window.update()
             if self.should_quit:
                 print(f"Thanks for playing {self.gameutils.get_game_name()}!")
                 break
-        self.window.mainloop()
+
 
 if __name__ == "__main__":
     game = Game()
